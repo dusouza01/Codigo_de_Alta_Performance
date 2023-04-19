@@ -9,6 +9,10 @@ public class Aula1 {
 		Elemento p1 = new Elemento();
 		p1.dado=23;
 		System.out.println(p1);
+		
+		Elemento p2 = new Elemento();
+		p2.dado = 55;
+		System.out.println(p2);
 	}
 
 }
