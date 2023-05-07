@@ -20,6 +20,7 @@ public class FilaInt {
 	public void enqueue(int elem) {
 		NO novo = new NO();
 		novo.dado = elem;
+		//prox=null, porque sempre que nao ha sucessor, o elemnto é sempre inserido no final da fila
 		novo.prox = null;
 		if(isEmpty()) {
 			ini = novo;
