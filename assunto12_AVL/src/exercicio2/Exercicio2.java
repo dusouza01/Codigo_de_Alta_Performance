@@ -15,6 +15,8 @@ public class Exercicio2 {
 			System.out.println(" 0 - Sair");
 			System.out.println(" 1 - Inserir");
 			System.out.println(" 2 - Mostrar FB dos nos");
+			System.out.println(" 3 - Remover nó escolhido pelo conteúdo");
+			System.out.println(" 4 - Monstrar quantidade de nós");
 			opcao = le.nextInt();
 
 			switch (opcao) {
@@ -24,13 +26,27 @@ public class Exercicio2 {
 			case 1:
 				System.out.print("Informe valor: ");
 				valor = le.nextInt();
-				avl.root = avl.inserirH(avl.root, valor);
+				avl.root = avl.inserirAVL(avl.root, valor);
+				avl.atualizaAlturas(avl.root);
 				break;
 			case 2:
 				System.out.println("Apresentacao FB dos nos");
 				avl.mostraFB(avl.root);
 				System.out.println();
 				break;
+
+			case 3:
+				System.out.print("Informe valor do no a ser removido: ");
+				valor = le.nextInt();
+				avl.root = avl.removeValor(avl.root, valor);
+				avl.root = avl.atualizaAlturaBalanceamento(avl.root);
+				avl.atualizaAlturas(avl.root);
+				break;
+				
+			case 4:
+				System.out.println("Quantidade de nos = " + avl.contaNos(avl.root, 0));
+				break;
+				
 			default:
 				System.out.println("Opcao Invalida");
 			}
