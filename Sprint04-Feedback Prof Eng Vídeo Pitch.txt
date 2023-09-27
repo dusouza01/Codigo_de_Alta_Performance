@@ -1,3 +1,0 @@
-Ótima introdução sobre o problema, com base que tem fonte de dados.
- Boa abordagem mas não apresentou os recursos de implementação, não aprsentou protótipo. 
-Necessário mais estudo sobre a temática com questões da viabilidade técnica para o domínio de negócio
